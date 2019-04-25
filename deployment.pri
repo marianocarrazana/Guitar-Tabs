@@ -12,7 +12,4 @@ unix:!android {
 
 export(INSTALLS)
 
-DISTFILES += \
-    $$PWD/CheckForm.ui.qml \
-    $$PWD/Check.qml
 

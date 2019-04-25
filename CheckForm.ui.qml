@@ -1,17 +1,36 @@
-import QtQuick 2.4
+import QtQuick 2.6
+import QtQuick.Controls 2.6
 
+CheckBox {
+    id: control
+    text: qsTr("CheckBox")
+    checked: true
 
-    Item {
-        id: row1
-        x: 0
-        width: 266
-        height: 28
-        anchors.top: parent.top
-        anchors.topMargin: 0
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
-        Rectangle{ width: 16 ;height: 16 ; anchors.left: parent.left; anchors.leftMargin: 2; anchors.verticalCenter: parent.verticalCenter}
-        Text{ text: "CheckText" ; anchors.left: parent.left; anchors.leftMargin: 0; anchors.verticalCenter: parent.verticalCenter }
+    indicator: Rectangle {
+        implicitWidth: 26
+        implicitHeight: 26
+        x: control.leftPadding
+        y: parent.height / 2 - height / 2
+        radius: 5
+        border.color: control.down ? "#17a81a" : "#21be2b"
+
+        Rectangle {
+            width: 14
+            height: 14
+            x: 6
+            y: 6
+            radius: 2
+            color: control.down ? "#17a81a" : "#21be2b"
+            visible: control.checked
+        }
     }
 
-
+    contentItem: Text {
+        text: control.text
+        font: control.font
+        opacity: enabled ? 1.0 : 0.3
+        color: control.down ? "#17a81a" : "#21be2b"
+        verticalAlignment: Text.AlignVCenter
+        leftPadding: control.indicator.width + control.spacing
+    }
+}

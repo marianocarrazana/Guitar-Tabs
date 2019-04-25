@@ -1,7 +1,7 @@
-import QtQuick 2.5
-import QtGraphicalEffects 1.0
+import QtQuick 2.6
+import QtGraphicalEffects 1.6
 
-Rectangle{
+Rectangle {
     id: column1
     anchors.fill: parent
     color: "#545454"
@@ -46,15 +46,15 @@ Rectangle{
         }
         DropShadow {
             color: "#555555"
-                anchors.fill: rectangle3
-                horizontalOffset: 0
-                verticalOffset: 0
-                radius: 4
-                fast: false
-                transparentBorder: true
-                spread: 0
-                samples: 9
-                source: rectangle3
+            anchors.fill: rectangle3
+            horizontalOffset: 0
+            verticalOffset: 0
+            radius: 4
+            fast: false
+            transparentBorder: true
+            spread: 0
+            samples: 9
+            source: rectangle3
         }
 
         Rectangle {
@@ -86,7 +86,6 @@ Rectangle{
                 font.pixelSize: 18
             }
         }
-
     }
 
     Item {
@@ -113,12 +112,11 @@ Rectangle{
                 height: 28
 
                 Check {
-                    id: check1
-                    width: 260
+                    id: check
                 }
 
                 Check {
-                    id: check2
+                    id: check1
                 }
             }
         }
@@ -144,16 +142,22 @@ Rectangle{
     }
     DropShadow {
         color: "#555555"
-            anchors.fill: rectangle2
-            horizontalOffset: 0
-            verticalOffset: 0
-            radius: 4
-            fast: false
-            transparentBorder: true
-            spread: 0
-            samples: 9
-            source: rectangle2
+        anchors.fill: rectangle2
+        horizontalOffset: 0
+        verticalOffset: 0
+        radius: 4
+        fast: false
+        transparentBorder: true
+        spread: 0
+        samples: 9
+        source: rectangle2
     }
-
-
 }
+
+
+
+
+/*##^## Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+ ##^##*/

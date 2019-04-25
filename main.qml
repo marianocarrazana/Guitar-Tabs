@@ -1,5 +1,5 @@
-import QtQuick 2.5
-import QtQuick.Window 2.2
+import QtQuick 2.6
+import QtQuick.Window 2.6
 
 Window {
     visible: true
@@ -9,3 +9,8 @@ Window {
     }
 }
 
+
+/*##^## Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+ ##^##*/
